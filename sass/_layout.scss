@@ -9,8 +9,8 @@
 .header {
     height: 7rem;
     font-size: 1.4rem;
-    background-color: #fff;
-    border-bottom: 1px solid var(--color-grey-light-2);
+    background-color: var(--color-grey-dark-5);
+    border-bottom: 1px solid var(--color-grey-dark-3);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,7 +39,7 @@
 
 .sidebar {
     //margin-top: 7rem;
-    background-color: var(--color-grey-dark-1);
+    background-color: var(--color-grey-dark-5);
     flex: 0 0 18%;
 
     display: flex;
@@ -47,11 +47,15 @@
     justify-content: space-between;
 
     margin-top: 7rem;
+    transition: all .3s;
+    left: 0px;
+    
+
 
     @media only screen and(min-width: 900px) {
         //sticky experiment
         position: fixed;
-        width: 18vw;
+        width: 245px;
         height: 100vh;
     }
 
@@ -61,24 +65,79 @@
     }
 }
 
+
+
+
+.sidebar--closed {
+    //margin-top: 7rem;
+    background-color: var(--color-grey-dark-1);
+    flex: 0 0 18%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-top: 7rem;
+
+
+    left: -245px;
+    transition: all .3s;
+
+
+    @media only screen and(min-width: 900px) {
+        //sticky experiment
+        position: fixed;
+        width: 245px;
+        height: 100vh;
+    }
+
+    @media only screen and(max-width: $bp-smallest) {
+        flex-direction: column;
+        margin-top: 10rem;
+    }
+}
+
+
+
+
 .hotel-view {
     //
     flex: 1 1 auto;
     overflow: auto;
+    transition: all .3s;
+    background-color: var(--color-grey-dark-4);
 
     @media only screen and(min-width: 900px) {
         margin-top: 7rem;
 
         //sticky-experiment
-        margin-left: 18vw;
+        margin-left: 245px;
     }
 }
+
+
+
+.hotel-view--full {
+    //
+    flex: 1 1 auto;
+    overflow: auto;
+    transition: all .3s;
+
+    @media only screen and(min-width: 900px) {
+        margin-top: 7rem;
+
+        //sticky-experiment
+        margin-left: 0px;
+    }
+}
+
+
 
 .details {
     display: flex;
     padding: 4.5rem;
-    background-color: var(--color-grey-light-1);
-    border-bottom: 1px solid var(--color-grey-light-2);
+    background-color: var(--color-grey-dark-4);
+    border-bottom: 1px solid var(--color-grey-dark-3);
     color: var(--color-grey-dark-2);
 
     @media only screen and(max-width: $bp-medium) {
@@ -91,7 +150,7 @@
 }
 
 .description {
-    background-color: #fff;
+    background-color: var(--color-grey-dark-5);
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
     flex: 0 0 60%;
     margin-right: 4.5rem;

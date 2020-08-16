@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet"> -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
@@ -16,7 +19,17 @@
     <div class="main-container">
 
         <header class="header">
-            <img src="img/logo-2.png" alt="Trillo Logo" class="logo">
+            <!-- <img src="img/logo-2.png" alt="Trillo Logo" class="logo"> -->
+            <div class="logo-text">
+                <svg onclick="sidebarTrigger()" class="logo-text--icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
+                    stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <span class="logo-text--1">the</span>
+                <span class="logo-text--2">Oasis</span>
+            </div>
 
             <form action="#" class="search">
                 <input class="search__input" type="text" name="" id="" placeholder="Search what you're thinking">
@@ -31,15 +44,22 @@
             <nav class="user-nav">
 
                 <div class="user-nav__icon-box">
-                    <svg class="user-nav__icon">
-                        <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                    <svg class="user-nav__icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
+                        stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                        </path>
                     </svg>
                     <span class="user-nav__notification">3</span>
                 </div>
 
                 <div class="user-nav__icon-box">
-                    <svg class="user-nav__icon">
-                        <use xlink:href="img/sprite.svg#icon-chat"></use>
+                    <svg class="user-nav__icon" aria-hidden="true" focusable="false" data-prefix="fas"
+                        data-icon="bell-on" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
+                        class="svg-inline--fa fa-bell-on fa-w-20">
+                        <path fill="currentColor"
+                            d="M112,192a24,24,0,0,0-24-24H24a24,24,0,0,0,0,48H88A24,24,0,0,0,112,192ZM51.66,64.78l55.42,32a24,24,0,1,0,24-41.56l-55.42-32a24,24,0,1,0-24,41.56ZM520.94,100a23.8,23.8,0,0,0,12-3.22l55.42-32a24,24,0,0,0-24-41.56l-55.42,32a24,24,0,0,0,12,44.78ZM320,512a64,64,0,0,0,64-64H256A64,64,0,0,0,320,512ZM616,168H552a24,24,0,0,0,0,48h64a24,24,0,0,0,0-48ZM479.92,208c0-77.69-54.48-139.91-127.94-155.16V32a32,32,0,1,0-64,0V52.84C214.56,68.09,160.08,130.31,160.08,208c0,102.31-36.14,133.53-55.47,154.28A31.28,31.28,0,0,0,96,384c.11,16.41,13,32,32.09,32H511.91c19.11,0,32-15.59,32.09-32a31.23,31.23,0,0,0-8.61-21.72C516.06,341.53,479.92,310.31,479.92,208Z"
+                            class=""></path>
                     </svg>
                     <span class="user-nav__notification">69</span>
                 </div>
@@ -54,63 +74,62 @@
 
         <div class="content">
 
-            
-                <nav class="sidebar">
-                    <ul class="side-nav">
-    
-                        <li class="side-nav__item side-nav__item--active">
-                            <a class="side-nav__link" href="">
-                                <svg class="side-nav__icon">
-                                    <use xlink:href="img/sprite.svg#icon-home"></use>
-                                </svg>
-                                <span>Hotels</span>
-                            </a>
-    
-                        </li>
-    
-                        <li class="side-nav__item">
-                            <a class="side-nav__link" href="">
-                                <svg class="side-nav__icon">
-                                    <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
-                                </svg>
-                                <span>Flights</span>
-                            </a>
-    
-                        </li>
-    
-                        <li class="side-nav__item">
-                            <a class="side-nav__link" href="">
-                                <svg class="side-nav__icon">
-                                    <use xlink:href="img/sprite.svg#icon-key"></use>
-                                </svg>
-                                <span>Car Rentals</span>
-                            </a>
-    
-                        </li>
-    
-                        <li class="side-nav__item">
-                            <a class="side-nav__link" href="#">
-                                <svg class="side-nav__icon">
-                                    <use xlink:href="img/sprite.svg#icon-map"></use>
-                                </svg>
-                                <span>Tours</span>
-                            </a>
-    
-                        </li>
 
-                        
-                    </ul>
-    
-                    <div class="copyright">
-                        Feel free to take inspiration and use this in your project <3
-                        <br>
+            <nav id="sidebar" class="sidebar">
+                <ul class="side-nav">
+
+                    <li class="side-nav__item side-nav__item--active">
+                        <a class="side-nav__link" href="">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-home"></use>
+                            </svg>
+                            <span>Home</span>
+                        </a>
+
+                    </li>
+
+                    <li class="side-nav__item">
+                        <a class="side-nav__link" href="">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
+                            </svg>
+                            <span>PMR</span>
+                        </a>
+
+                    </li>
+
+                    <li class="side-nav__item">
+                        <a class="side-nav__link" href="">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-key"></use>
+                            </svg>
+                            <span>Playstation</span>
+                        </a>
+
+                    </li>
+
+                    <li class="side-nav__item">
+                        <a class="side-nav__link" href="#">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-map"></use>
+                            </svg>
+                            <span>Xbox</span>
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+                <div class="copyright">
+                    Feel free to take inspiration and use this in your project <3 <br>
                         <span class="contact">contact: shamim@binarypoets.net</span>
-                    </div>
-    
-                </nav>
-            
+                </div>
 
-            <main class="hotel-view">
+            </nav>
+
+
+            <main id="hotel-view" class="hotel-view">
 
                 <div class="gallery">
 
@@ -130,7 +149,7 @@
 
                 <div class="overview">
                     <h1 class="overview__heading">
-                        Hotel ALPINA
+                        The Witcher 3
                     </h1>
 
                     <div class="overview__stars">
@@ -157,12 +176,12 @@
                         <svg class="overview__icon-location">
                             <use xlink:href="img/sprite.svg#icon-location-pin"></use>
                         </svg>
-                        <button class="btn-custom-inline" type="button">Gstaad, Switzerland</button>
+                        <button class="btn-custom-inline" type="button">CD Projekt Red</button>
 
                     </div>
 
                     <div class="overview__rating">
-                        <div class="overview__rating-average">8.9</div>
+                        <div class="overview__rating-average">10</div>
                         <div class="overview__rating-count">369 Votes</div>
                     </div>
                 </div>
@@ -248,13 +267,13 @@
                 </div>
                 <div class="cta">
                     <h2 class="cta__book-now">
-                        Good News! We're giving 25% discount for newly married couples!
+                        Good News! Flat 25% discount on Witcher 3 GOTY Edition..
                     </h2>
 
                     <button class="btn-custom-hover">
 
-                        <span class="btn-custom-hover__visible">Book Now</span>
-                        <span class="btn-custom-hover__hidden">Only 4 Rooms Left</span>
+                        <span class="btn-custom-hover__visible">Buy Now</span>
+                        <span class="btn-custom-hover__hidden">Limited Time</span>
                     </button>
                 </div>
 
@@ -263,6 +282,10 @@
         </div>
 
     </div>
+
+
+    <!-- Loading All Scripts -->
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>
